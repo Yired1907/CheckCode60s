@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
         .btn-grad {
-            background-image: linear-gradient(to right, #b91313 0%, #d30d0db7 100%);
+            background-image: linear-gradient(to right, #ec5628 0%, #b64625 100%);
             margin: 10px;
             padding: 10px 10px;
             text-align: center;
@@ -34,6 +34,11 @@
             text-decoration: none;
         }
     </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
 </head>

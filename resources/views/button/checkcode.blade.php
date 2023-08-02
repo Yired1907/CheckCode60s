@@ -11,6 +11,19 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <title>Hello, world!</title>
+    <style>
+        .btn-copy {
+            padding: 5px 10px;
+            border: none;
+            background-color: #f2f2f2;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .btn-copy i {
+            margin-right: 5px;
+        }
+    </style>
 </head>
 
 <body>

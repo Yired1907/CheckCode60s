@@ -22,14 +22,13 @@ class CheckController extends Controller
 
     public function store(Request $request)
     {
-        // $validatedData = $request->validate([
-        //     'code' => 'required', // Kiểm tra mã nhập vào có tồn tại hay không sẽ được thực hiện bên trong Service
-        // ]);
-        // dd($validatedData);
-
         $code = $request->input('code');
+        if (session()->has($code)) {
+            return redirect()->back()->with('error', 'Mã đã được sử dụng!');
+        }
 
         if ($this->codeServices->isValid($code)) {
+            session()->put($code, true);
             return redirect('/home')->with('success', 'Mã hợp lệ!');
         } else {
             return redirect()->back()->with('error', 'Mã không đúng!');

@@ -49,7 +49,11 @@ _btn.on('click', (e) => {
                         return;
                     }
                     // console.log(rps.code)
-                    $('#lay-ma').html(`<button type="button" style="font-weight: bold;" onclick="StringCopy('${rps.code}')" class="btn-grad">${rps.code}</button>`);
+                    $('#lay-ma').html(`<button type="button" style="font-weight: bold;
+                    " onclick="StringCopy('${rps.code}')
+                    " class="btn-grad">
+                    ${rps.code} <i class="far fa-copy"></i>
+                    </button>`);
                 },
                 error: function (textStatus, errorThrown) {
                     //Làm gì đó khi có lỗi xảy ra
@@ -78,4 +82,6 @@ function StringCopy(str) {
     document.execCommand('copy');
     // Remove temporary element
     document.body.removeChild(el);
+
+    toastr.success('Đã sao chép mã!');
 }

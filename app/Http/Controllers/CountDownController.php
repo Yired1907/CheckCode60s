@@ -11,6 +11,12 @@ use Illuminate\Support\Facades\Cache;
 class CountDownController extends Controller
 {
 
+    // protected $codeServices;
+    // public function __construct(CodeServices $codeServices)
+    // {
+    //     $this->codeServices = $codeServices;
+    // }
+
     public function index()
     {
         return view('button.countdown');
