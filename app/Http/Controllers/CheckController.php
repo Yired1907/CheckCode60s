@@ -9,10 +9,10 @@ use Illuminate\Support\Facades\Session;
 
 class CheckController extends Controller
 {
-    protected $codeServices;
-    public function __construct(CodeServices $codeServices)
+    protected $codeSv;
+    public function __construct(CodeServices $codeSv)
     {
-        $this->codeServices = $codeServices;
+        $this->codeSv = $codeSv;
     }
 
     public function index()
@@ -27,7 +27,7 @@ class CheckController extends Controller
             return redirect()->back()->with('error', 'Mã đã được sử dụng!');
         }
 
-        if ($this->codeServices->isValid($code)) {
+        if ($this->codeSv->isValid($code)) {
             session()->put($code, true);
             return redirect('/home')->with('success', 'Mã hợp lệ!');
         } else {
