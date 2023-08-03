@@ -5,16 +5,17 @@ $.ajaxSetup({
     }
 });
 
+var APP_URL = window.appUrl;
 
 function getdomain(e, r, f) {
     return e + "?w=" + r + "&v=" + f;
 }
 
-var APP_URL = window.appUrl;
+
 
 var lchref = location.href;
 ifm_website_id = lchref.replace("?m=1", "");
-var secound = 60;
+var secound = 2;
 let _btn = $('#save-keycode');
 
 _btn.on('click', (e) => {

@@ -22,28 +22,14 @@ use Illuminate\Support\Facades\Route;
 //-----Check code---
 Route::controller(CheckController::class)->group(function () {
     Route::get('/check-code', 'index');
-    Route::post('/sub-code' . 'store');
+    Route::post('/sub-code', 'store');
 });
 
 
 Route::controller(CountDownController::class)->group(function () {
     Route::get('/count-down', 'index');
-    Route::post('/sub-code', 'create');
+    Route::post('/post-code', 'create');
 });
 
 
 Route::get('/home', [HomeController::class, 'index']);
-
-
-
-
-
-
-
-
-
-// Route::get('/check-code', [CheckController::class, 'index']);
-// Route::post('/sub-code', [CheckController::class, 'store']);
-
-// Route::get('/count-down', [CountDownController::class, 'index']);
-// Route::post('/post-code', [CountDownController::class, 'create']);

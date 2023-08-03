@@ -56,6 +56,7 @@
 <script>
     window.appUrl = "{{ env('APP_URL') }}";
 </script>
+
 <!-- ... -->
 <script src={{ asset('/js/main.js') }}></script>
 
