@@ -51,12 +51,12 @@
             <button type="button" id="save-keycode" style="font-weight: bold;" class="btn-grad">Lấy Mã Captcha</button>
         </div>
     </form>
-
-    <script>
-        window.appUrl = "{{ env('APP_URL') }}";
-    </script>
-    <!-- ... -->
-    <script src={{ asset('/js/main.js') }}></script>
 </body>
+
+<script>
+    window.appUrl = "{{ env('APP_URL') }}";
+</script>
+<!-- ... -->
+<script src={{ asset('/js/main.js') }}></script>
 
 </html>
